@@ -1,6 +1,5 @@
 import sys
 from datetime import datetime
-
 import requests
 import xmltodict
 
