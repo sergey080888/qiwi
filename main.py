@@ -5,10 +5,13 @@ import xmltodict
 
 
 def convert_date(date_str):
-    # Convert the date string to a datetime object
-    date_obj = datetime.strptime(date_str, "%Y-%m-%d")
-    # Format the datetime object as a string in the desired format
-    formatted_date = date_obj.strftime("%d/%m/%Y")
+    try:
+        # Convert the date string to a datetime object
+        date_obj = datetime.strptime(date_str, "%Y-%m-%d")
+        # Format the datetime object as a string in the desired format
+        formatted_date = date_obj.strftime("%d/%m/%Y")
+    except  ValueError:
+        return
     return formatted_date
 
 
